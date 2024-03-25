@@ -31,9 +31,9 @@ if (speed <= speedLimit){
     const demeritPoints = Math.floor((speed - speedLimit)*0.2);
     return demeritPoints;
 } 
-if(demeritPoints>12){
-    return "License suspended."
-}
+       if(demeritPoints>12){
+          return "License suspended."
+       }
 };
 //Invoke function
 speedDetector();
@@ -43,15 +43,15 @@ speedDetector();
 //Net salary calculator
 function myPayee(grossSalary){
 if (grossSalary <= 24000){
-    return 'grossSalary*0.1'
+    return grossSalary*0.1
 } else if(grossSalary>=24001 && grossSalary<= 32333){
-    return '(24000*0.1)+0.25*(grossSalary-24000)'
+    return (24000*0.1)+0.25*(grossSalary-24000)
 } else if (grossSalary>=32334 && grossSalary<=500000){
-    return '(24000*0.1)+(3233*0.25)+0.3(grossSalary-32333)'
+    return (24000*0.1)+(8333*0.25)+0.3*(grossSalary-32333)
 } else if (grossSalary>=500001 && grossSalary<=800000){
-    return '(24000*0.1)+(3233*0.25)+(0.3(grossSalary-32333))+0.325*(grossSalary-500000)' 
+    return (24000*0.1)+(8333*0.25)+(0.3*467667)+0.325*(grossSalary-500000)
 }else {
-    return '0.35*(grossSalary-800000)+(24000*0.1)+(3233*0.25)+(0.3(grossSalary-32333))+(0.325*(grossSalary-500000))' 
+    return 0.35*(grossSalary-800000)+(24000*0.1)+(8333*0.25)+(0.3*467667)+(0.325*300000) 
 };
 }
 myPayee()

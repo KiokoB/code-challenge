@@ -99,3 +99,27 @@ if (grossSalary<=5999){
 };
 //Invoke the function
 NHIFDeduction();
+
+//NSSF Deductions
+//Create a function to calculate NSSF Deductions
+function NSSFDeduction(pensionablePay){ 
+    let tier1 =0;
+       tier2 = 0;
+   if(pensionablePay<=7000) {
+     return (pensionablePay*0.06)
+  }else if(pensionablePay>=7001 && pensionablePay<=36000){
+        return (pensionablePay*0.06)
+    }
+};
+//invoke the function
+NSSFDeduction();
+
+//Determine net salary
+//Input gross salary value
+let grossSalary='value';
+let NHIFDeduct = NHIFDeduction();
+let NSSFDeduct = NSSFDeduction();
+let tax = myPayee()
+const netSalary = grossSalary - (NHIFDeduct+NSSFDeduct+tax);
+netSalary
+

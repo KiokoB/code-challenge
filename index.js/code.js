@@ -22,14 +22,14 @@ studentGradeGenerator();
 //Code challenge 2
 //Speed Detector
 function speedDetector(speed){
-    const speedLimit = '70km/s'
-    const demeritPoints = 0
+    const speedLimit = 70
+    let demeritPoints = 0
 //Conditional statements
-if (speed <= '70km/s'){
+if (speed <= speedLimit){
     return "Ok";
-} else if(speed>'70km/s'){
-    demeritPoints = Math.floor((speed - speedLimit)*0.2);
-    return "demeritPoints";
+} else if(speed>speedLimit){
+    const demeritPoints = Math.floor((speed - speedLimit)*0.2);
+    return demeritPoints;
 } 
 if(demeritPoints>12){
     return "License suspended."

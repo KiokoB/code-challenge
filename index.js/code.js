@@ -1,7 +1,7 @@
 // Code challengde 1
-// Student grade generator
+// Function for student grade generator
 function studentGradeGenerator(marks){
-//Conditional statements
+//Conditional statements that check where the grades fits and return necessary output
  if (marks>79){
     return 'A';
  } else if (marks>=60 && marks<=79){
@@ -14,35 +14,37 @@ function studentGradeGenerator(marks){
     return 'E';
  }
 };
-//Invoke the function
+//Invoke the function to get the student grade
 studentGradeGenerator();
 
 
 
 //Code challenge 2
 //Speed Detector
+//Create a function to check on the speed
 function speedDetector(speed){
     const speedLimit = 70
     let demeritPoints = 0
-//Conditional statements
+//Conditional statements that check speed
 if (speed <= speedLimit){
     return "Ok";
 } else if(speed>speedLimit){
     const demeritPoints = Math.floor((speed - speedLimit)*0.2);
     return demeritPoints;
 } 
+//Create a condition when driver gets more than 12 demerit points
        if(demeritPoints>12){
           return "License suspended."
        }
 };
-//Invoke function
+//Invoke the function to get appropriate input
 speedDetector();
 
 
 //Code challenge 3
-//Net salary calculator
+//Net salary calculator function
 function myPayee(grossSalary){
-//Write conditional statements to evaluate payee
+//Write conditional statements to evaluate payee accaring to gross salary
 if (grossSalary <= 24000){
     return grossSalary*0.1
 } else if(grossSalary>=24001 && grossSalary<= 32333){
@@ -59,8 +61,9 @@ if (grossSalary <= 24000){
 myPayee()
 
 //NHIF Deductions
-//Create a function to calculate the NHIF Deductions
+//Write a function to calculate the NHIF Deductions
 function NHIFDeduction(grossSalary){
+//Write conditional statements as follows to get reqiured input
 if (grossSalary<=5999){
     return 150;
 } else if(grossSalary>=6000 && grossSalary<=7999){
@@ -97,7 +100,7 @@ if (grossSalary<=5999){
     return 1700;
 }
 };
-//Invoke the function
+//Invoke the function by inputing gross salary to get NHIF deductions
 NHIFDeduction();
 
 //NSSF Deductions
@@ -105,21 +108,26 @@ NHIFDeduction();
 function NSSFDeduction(pensionablePay){ 
     let tier1 =0;
        tier2 = 0;
+//Write conditional statements to evaluate NSSF deduction
    if(pensionablePay<=7000) {
      return (pensionablePay*0.06)
   }else if(pensionablePay>=7001 && pensionablePay<=36000){
         return (pensionablePay*0.06)
     }
 };
-//invoke the function
+//Invoke the function by inputing pensinable pay
 NSSFDeduction();
 
 //Determine net salary
 //Input gross salary value
 let grossSalary='value';
+//Input NHIF Deduction
 let NHIFDeduct = NHIFDeduction();
+//Input NSSF deduction
 let NSSFDeduct = NSSFDeduction();
+//Input tax
 let tax = myPayee()
+//Write an expression that calculate the net salary after all deductions are made
 const netSalary = grossSalary - (NHIFDeduct+NSSFDeduct+tax);
 netSalary
 
